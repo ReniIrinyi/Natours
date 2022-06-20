@@ -1,0 +1,82 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+/* ***************************************
+----------------Animations----------------
+*************************************** */
+/* heading-primary--main-Animation */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* heading-primary--sub-Animation */
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* ***************************************
+----------------Buttons----------------
+*************************************** */
+/* ez egy link, tehát a link pseudoklass-al kell kijelölni */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  /* középre akarjuk: a btn olyan mintha text lenne, mert link ezért a text-boxban kell középre igazitani a text-align-al!  */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 40%;
+}
+
+.btn:hover {
+  transform: ;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
