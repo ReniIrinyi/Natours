@@ -58,6 +58,17 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* ***************************************
 ----------------Buttons----------------
 *************************************** */
@@ -69,14 +80,44 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
-  border-radius: 40%;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  animation: moveInButton 1s ease-out;
 }
 
 .btn:hover {
-  transform: ;
+  transform: translateY(-3px);
+  /* 1. x 2. y 3.blur 4.color*/
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.244);
+}
+
+.btn:active {
+  transform: translate(-1px);
 }
 
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
