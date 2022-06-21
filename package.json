@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReniIrinyi/Natours.git"
+  },
+  "author": "ReniIrinyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReniIrinyi/Natours/issues"
+  },
+  "homepage": "https://github.com/ReniIrinyi/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
