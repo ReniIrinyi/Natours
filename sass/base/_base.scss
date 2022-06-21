@@ -1,0 +1,17 @@
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing isnt inherit automatically, wir müssen on each element inherit schreiben */
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+}
+
+/* general converting px to rem/em => set font-size to 10px!! 10 px=1rem (general 16px=1rem)  => ez viszont
+nem jó mert akkor az user nem tudja magának beállitani a font-size-ot! ezért
+jobb ha %-ban adjuk meg. => 10/16 => 62.5*/
+html {
+  font-size: 62.5%;
+}

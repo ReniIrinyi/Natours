@@ -21,9 +21,6 @@ jobb ha %-ban adjuk meg. => 10/16 => 62.5*/
 html {
   font-size: 62.5%; }
 
-/* ***************************************
-----------------Animations----------------
-*************************************** */
 /* heading-primary--main-Animation */
 @keyframes moveInLeft {
   0% {
@@ -54,9 +51,6 @@ html {
     opacity: 1;
     transform: translate(0); } }
 
-/* ***************************************
-----------------Buttons----------------
-*************************************** */
 .btn--animated {
   animation: moveInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards; }
@@ -101,9 +95,6 @@ html {
   .btn--white::after {
     background-color: #fff; }
 
-/* ***************************************
-----------------HEADER--------------------
-***************************************** */
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -124,34 +115,3 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* hogy az animation ne razkodjon amikor bejön */
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    font-size: 6rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    /* mielött lejátsza vár 3 s-t */
-    /* animation-delay: 3s; */
-    /* 3x történik meg az animation */
-    /* animation-iteration-count: 3; */
-    /* https://developer.mozilla.org/de/docs/Web/CSS/animation-timing-function */
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    font-size: 2rem;
-    /* animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; */
-    /* rövidebben is irhatjuk: */
-    animation: moveInRight 1s ease-out; }
