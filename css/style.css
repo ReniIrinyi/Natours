@@ -1,5 +1,4 @@
 @charset "UTF-8";
-*,
 *::after,
 *::before {
   margin: 0;
@@ -62,9 +61,7 @@ html {
   animation: moveInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-/* ez egy link, tehát a link pseudoklass-al kell kijelölni */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   display: inline-block;
   /* középre akarjuk: a btn olyan mintha text lenne, mert link ezért a text-boxban kell középre igazitani a text-align-al!  */
   text-transform: uppercase;
@@ -78,14 +75,13 @@ html {
 .btn:hover {
   transform: translateY(-3px);
   /* 1. x 2. y 3.blur 4.color*/
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.244); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translate(-0.1rem); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
 
 .btn::after {
   content: "";
@@ -99,12 +95,11 @@ html {
   z-index: -1;
   transition: all 0.5s; }
 
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 /* ***************************************
 ----------------HEADER--------------------
@@ -117,21 +112,18 @@ html {
   /* 1. x 2. from left sied 100% 3. y 4.from top */
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.53rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.53rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -139,29 +131,27 @@ html {
   /* hogy az animation ne razkodjon amikor bejön */
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  font-size: 6rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  /* mielött lejátsza vár 3 s-t */
-  /* animation-delay: 3s; */
-  /* 3x történik meg az animation */
-  /* animation-iteration-count: 3; */
-  /* https://developer.mozilla.org/de/docs/Web/CSS/animation-timing-function */
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  font-size: 2rem;
-  /* animation-name: moveInRight;
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    font-size: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* mielött lejátsza vár 3 s-t */
+    /* animation-delay: 3s; */
+    /* 3x történik meg az animation */
+    /* animation-iteration-count: 3; */
+    /* https://developer.mozilla.org/de/docs/Web/CSS/animation-timing-function */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    font-size: 2rem;
+    /* animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
-  /* rövidebben is irhatjuk: */
-  animation: moveInRight 1s ease-out; }
+    /* rövidebben is irhatjuk: */
+    animation: moveInRight 1s ease-out; }
