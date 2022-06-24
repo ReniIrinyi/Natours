@@ -45,3 +45,24 @@
     );
   }
 }
+
+.section-tours-center {
+  max-width: $grid-width;
+
+  margin: 0 auto; //center Block element inside ein other Block element
+  &:not(:last-child) //mindent kiválasztunk KIVÈVE a last child-ot
+  {
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    //minden elemet kiválaszt ami a col- attributtal kezdödik
+
+    float: left;
+
+    margin-right: 5rem;
+    margin-left: 9.5rem;
+  }
+}
