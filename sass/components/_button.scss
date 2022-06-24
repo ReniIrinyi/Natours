@@ -3,6 +3,7 @@
     animation: moveInBottom 1s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
+  &, //ez azt jelenti hogy nem csak a alinkre lesz mostmár érvényes hanem a button elementre is!! 
   &:link,
   &:visited {
     display: inline-block;
@@ -13,7 +14,11 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
+
+    //change for button-element
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translateY(-3px);
@@ -24,8 +29,11 @@
       opacity: 0;
     }
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translate(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &::after {
