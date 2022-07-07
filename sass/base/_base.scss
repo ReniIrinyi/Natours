@@ -7,6 +7,11 @@
 }
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 /* general converting px to rem/em => set font-size to 10px!! 10 px=1rem (general 16px=1rem)  => ez viszont

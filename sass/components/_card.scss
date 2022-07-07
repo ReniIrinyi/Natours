@@ -4,7 +4,11 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem;
+
   width: 30rem;
+  @include respond(tab-port) {
+    width: 100%;
+  }
 
   &__side {
     font-size: 2rem;
