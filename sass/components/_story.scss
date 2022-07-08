@@ -16,6 +16,8 @@
   //   ); //shape and img  adriekt child=> img már van egy transform 2 transform egy elemen nem lehet!
   // }
 
+  @include respond(tab-port) {
+  }
   &__shape {
     width: 15rem;
     height: 15rem;

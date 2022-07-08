@@ -383,11 +383,12 @@ body {
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.75), rgba(86, 67, 250, 0.75)); }
   .card__details {
-    padding: 2rem 3rem 0rem 0rem; }
+    padding: 2rem 3rem 2rem 3rem; }
     .card__details ul {
       list-style: none;
-      width: 80%;
-      margin: 0 auto; }
+      width: 100%;
+      margin: 0 auto;
+      padding: 0; }
       .card__details ul li {
         text-align: center;
         font-size: 1.5rem;
@@ -399,7 +400,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 100%;
     text-align: center; }
   .card__price-box {
     text-align: center;
@@ -435,12 +436,14 @@ body {
         top: 0%;
         left: 0%;
         transform: translate(0);
-        width: 80%;
-        padding: 7rem 4rem 4rem; }
+        width: 85%;
+        padding: 5rem 4rem 4rem; }
       .card__price-box {
         margin-bottom: 3rem; }
       .card__price-value {
-        font-size: 5rem; } }
+        font-size: 4rem; } }
+  .card__details {
+    padding: 1rem 3rem; }
 
 .story {
   width: 75%;
