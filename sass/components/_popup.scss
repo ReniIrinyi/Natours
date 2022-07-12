@@ -50,17 +50,33 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.5s 0.2s;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__img {
-    display: block;
     width: 100%;
     height: 100%;
-  }
+    @include respond(tab-port) {
+      float: left;
 
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
   &__left {
-    width: 33.33334%;
+    width: 35%;
     display: table-cell;
+    vertical-align: middle;
+    @include respond(tab-port) {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
   }
 
   &__right {
@@ -68,6 +84,12 @@
     display: table-cell;
     vertical-align: middle;
     padding: 5rem 3rem;
+    @include respond(tab-port) {
+      align-items: center;
+      padding: 1rem 1rem 2rem 1rem;
+      margin: auto;
+      width: 75%;
+    }
   }
   &__paragraph {
     font-size: 1.5rem;
@@ -80,5 +102,13 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+      column-count: 2;
+      column-gap: 2rem;
+      -moz-column-count: 2;
+      -moz-column-gap: 2rem;
+    }
   }
 }

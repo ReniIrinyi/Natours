@@ -455,6 +455,14 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 62em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: translateX(0) skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -465,13 +473,19 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0); } }
   .story__img {
     height: 100%;
-    transform: translate(-4rem) scale(1.4rem);
+    transform: translate(-4rem) scale(1.4);
     backface-visibility: hidden;
-    transition: all 1s; }
+    transition: all 0.5s; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -518,6 +532,9 @@ body {
   width: 70%;
   display: block;
   transition: all 0.7s; }
+  @media (max-width: 62em) {
+    .form__input {
+      width: 70%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2 rem rgba(0, 0, 0, 0.1);
@@ -546,6 +563,11 @@ body {
 .form__radio-group {
   width: 40%;
   display: inline-block; }
+  @media (max-width: 62em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 3rem;
+      display: block; } }
 
 .form__radio-label {
   font-size: 1.6rem;
@@ -622,18 +644,39 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.5s 0.2s; }
+    @media (max-width: 62em) {
+      .popup__content {
+        display: block; } }
   .popup__img {
-    display: block;
     width: 100%;
     height: 100%; }
+    @media (max-width: 62em) {
+      .popup__img {
+        float: left;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+        object-position: bottom; } }
   .popup__left {
-    width: 33.33334%;
-    display: table-cell; }
+    width: 35%;
+    display: table-cell;
+    vertical-align: middle; }
+    @media (max-width: 62em) {
+      .popup__left {
+        height: 100%;
+        width: 100%;
+        display: block; } }
   .popup__right {
     width: 66.66667%;
     display: table-cell;
     vertical-align: middle;
     padding: 5rem 3rem; }
+    @media (max-width: 62em) {
+      .popup__right {
+        align-items: center;
+        padding: 1rem 1rem 2rem 1rem;
+        margin: auto;
+        width: 75%; } }
   .popup__paragraph {
     font-size: 1.5rem;
     margin-bottom: 3rem;
@@ -645,6 +688,13 @@ body {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto; }
+    @media (max-width: 62em) {
+      .popup__paragraph {
+        margin-bottom: 2rem;
+        column-count: 2;
+        column-gap: 2rem;
+        -moz-column-count: 2;
+        -moz-column-gap: 2rem; } }
 
 .row {
   max-width: 140rem;
@@ -965,8 +1015,21 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.2) 50%), url(../../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 3px;
-  height: 50rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0.2) 70%), url(../../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 62em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../../img/nat-10.jpg);
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 4rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 70%; } }
+    @media (max-width: 62em) {
+      .book__form {
+        width: 100%; } }
