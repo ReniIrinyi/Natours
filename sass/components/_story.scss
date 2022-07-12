@@ -6,7 +6,6 @@
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
-
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
@@ -27,25 +26,32 @@
   }
 
   &__shape {
-    width: 15rem;
-    height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%); //ehez float kell es webkit
-    shape-outside: circle(
-      50% at 50% 50%
-    ); //ehez float kell es webkit és ha az elementnek van hight és width
-    -webbkit-clip-path: circle(50% at 50% 50%); //hogy a kép kör legyen
-    clip-path: circle(50% at 50% 50%);
+    //ehez float kell es webkit és ha az elementnek van hight és width
+
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: circle(50% at 50% 50%)) or
+      (-webkit-clip-path: circle(50% at 50% 50%)) {
+      -webbkit-clip-path: circle(50% at 50% 50%); //hogy a kép kör legyen
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%); //ehez float kell es webkit
+      shape-outside: circle(50% at 50% 50%);
+      width: 15rem;
+      height: 15rem;
+      border-radius: none;
+    }
 
     @include respond(phone) {
-      transform: skewX(0);
+      transform: translateX(-3rem) skewX(0);
     }
   }
   &__img {
     height: 100%;
-    transform: translate(-4rem) scale(1.4);
+    transform: translateX(-4rem) scale(1.4);
 
     backface-visibility: hidden;
     transition: all 0.5s;

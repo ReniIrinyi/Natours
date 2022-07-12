@@ -14,6 +14,11 @@ body {
   }
 }
 
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
 /* general converting px to rem/em => set font-size to 10px!! 10 px=1rem (general 16px=1rem)  => ez viszont
 nem jó mert akkor az user nem tudja magának beállitani a font-size-ot! ezért
 jobb ha %-ban adjuk meg. => 10/16 => 62.5*/
